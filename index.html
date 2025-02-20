@@ -1,12 +1,190 @@
-<div class="erick-style clase-prueba"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hat">
+    </div>
+    <div class="menene">
+        <div class="glasses">
+            <div class="glass">
+                <p></p>
+                <p></p>
+            </div>
+            <div class="glass">
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mouth">
+            <div class="nose"></div>
+            <p>-</p>
+        </div>
+    </div>
+</body>
+</html>
+
 
 <style>
-    .erick-style {
+    .hat {
+        content: "";
+        display: block;
+        margin-top: 5em;
+        margin-left: 12em;
+        margin-bottom: -8.5em;
+        height: 180px;
+        transform: rotate(20deg);
+        width: 260px;
+        background-color: black;
+        border-radius: 50%;
+        clip-path: polygon(30% 0%, 15% 100%, 70% 100%, 60% 0%);
+        border: solid 7px black;
+    }
+
+    .hat::before {
+        content: "";
+        display: block;
+        height: 180px;
+        width: 260px;
+        margin-left: -.4em;
+        margin-top: -.45em;
+        background-color: #D7304E;
+        border-radius: 50%;
+        clip-path: polygon(33% 0%, 18% 100%, 67% 100%, 57% 0%);
+        border: solid 7px black;
+    }
+
+    .menene {
+        transform: translateZ(0);
         background-color: #AD5E40;
-        border-radius: 5000px;
+        border-radius: 50%;
         border: solid 7px black;
         width: 450px;
         height: 500px;
+        padding-bottom: 0%;
+    }
+
+    .menene .glasses {
+        display: flex;
+        flex-direction: row;
+        margin-left: 3em;
+        margin-top: -1.5em;
+    }
+
+    .menene .glasses .glass:last-child {
+        transform: rotateY(180deg);
+    }
+    
+    .menene .glasses .glass::after {
+        content: "";
+        display: block;
+        margin-top: -4em;
+        margin-left: -3.5em;
+        height: 30px;
+        background-color: #000000;
+    }
+
+    .menene .glasses .glass:first-child::after {
+        width: 50px;
+        clip-path: polygon(20% 0%, 100% 20%, 100% 100%, 40% 100%);
+    }
+
+    .menene .glasses .glass:last-child::after {
+        width: 65px;
+        margin-left: -4.5em;
+        clip-path: polygon(0% 0%, 100% 20%, 100% 90%, 0% 100%);
+    }
+
+    .menene .glass {
+        border-radius: 100%;
+        border: solid 15px black;
+        background-color: #AD5E40;
+        height: 150px;
+        width: 150px;
+        margin-top: 3em;
+        margin-left: -0.5em;
+        margin-bottom: 0em;
+    }
+
+    /* Cejas */
+    .menene .glass > p {
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            border-top-left-radius: 100px;
+            overflow: hidden;
+            border: 3px solid black; 
+            border-bottom: none;
+            border-right: none;
+            margin-left: 5em;
+            margin-top: 2em;
+            margin-bottom: 0em;
+            transform: rotate(15deg);
+    }
+
+    .menene .glass:last-child > p {
+            width: 25px;
+            height: 25px;
+            background-color: transparent;
+            border-top-left-radius: 100px;
+            overflow: hidden;
+            border: 3px solid black; 
+            border-bottom: none;
+            border-right: none;
+            margin-left: 4.5em;
+            margin-top: 2em;
+            margin-bottom: 0em;
+            transform: rotate(15deg);
+    }
+    
+    /* Ojos */
+    .menene .glass:first-child p + p {
+        border-radius: 50%;
+        background-color: black;
+        transform: rotate(15deg);
+        height: 50px;
+        width: 20px;
+        margin-left: 6.2em;
+        margin-top: 1em;
+    }
+
+    .menene .glass:last-child p + p {
+        border-radius: 50%;
+        background-color: black;
+        transform: rotate(5deg);
+        height: 50px;
+        width: 20px;
+        margin-left: 5.4em;
+        margin-top: 1em;
+    }
+
+    .menene .mouth {
+        background-color: #FEE7C6;
+        border-radius: 50%;
+        border: solid 5px black;
+        width: 300px;
+        height: 200px;
+        margin-left: 4em;
+        margin-top: -1.5em;
+    }
+
+    .menene .mouth p {
+        font-size: 4em;
+        margin-top: 0em;
+        margin-left: 2.3em;
+    }
+
+    .menene .mouth .nose {
+        background-color: black;
+        border-radius: 50%;
+        border: solid 5px black;
+        width: 55px;
+        height: 25px;
+        margin-left: 7em;
+        margin-top: -.3em;
     }
 
 </style>
