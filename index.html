@@ -6,28 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="hat">
-    </div>
-    <div class="rope">
-        <p></p>
-        <p></p>
-    </div>
-    <div class="menene">
-        <div class="glasses">
-            <div class="glass">
+    <div class="container">
+        <div>
+            <div class="hat">
+            </div>
+            <div class="rope">
                 <p></p>
                 <p></p>
             </div>
-            <div class="glass">
-                <p></p>
-                <p></p>
+            <div class="menene">
+                <div class="glasses">
+                    <div class="glass">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="glass">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="mouth">
+                    <div class="nose"></div>
+                    <p>-</p>
+                </div>
+                <div class="clothes"></div>
+                <div class="rib"></div>
             </div>
-        </div>
-        <div class="mouth">
-            <div class="nose"></div>
-            <p>-</p>
-        </div>
-        <div class="clothes">
+            <div class="rib-pattern">
+                <div class="pattern-container">
+                    <div></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -35,6 +44,25 @@
 
 
 <style>
+    :root {
+        --rib-cut: 2%;
+        --rib-cut-outline: 0.01%
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
     .hat {
         content: "";
         display: block;
@@ -113,30 +141,6 @@
         margin-top: -3em;
     }
 
-    .menene .clothes {
-        background-color: #000000;
-        border-radius: 50%;
-        width: 455px;
-        height: 495px;
-        padding-bottom: 0%;
-        margin-top: -24.5em;
-        margin-left: -.10em;
-        clip-path: polygon(0% 45%, 49% 60%, 100% 39%, 100% 91%, 48% 70%, 1% 100%);
-    }
-
-    .menene .clothes::after {
-        content: "";
-        display: block;
-        background-color: #018F82;
-        border-radius: 50%;
-        width: 455px;
-        height: 495px;
-        padding-bottom: 0%;
-        margin-top: -24.5em;
-        margin-left: -.20em;
-        clip-path: polygon(0% 45%, 49% 60%, 100% 39%, 100% 91%, 48% 70%, 1% 90%);
-    }
-
     .menene {
         transform: translateZ(0);
         background-color: #AD5E40;
@@ -145,6 +149,70 @@
         width: 450px;
         height: 500px;
         padding-bottom: 0%;
+    }
+
+    .menene .clothes {
+        background-color: #000000;
+        border-radius: 50%;
+        width: 457px;
+        height: 507px;
+        padding-bottom: 0%;
+        margin-top: -24.5em;
+        margin-left: -.15em;
+        clip-path: polygon(0% 45%, 49% 60%, 100% 39%, 100% 91%, 48% 70%, 1% 90%);
+    }
+
+    .menene .clothes::before {
+        content: "";
+        display: block;
+        background-color: #018F82;
+        border-radius: 50%;
+        width: 450px;
+        height: 500px;
+        padding-bottom: 0%;
+        margin-top: -24.5em;
+        margin-left: 0.1em;
+        clip-path: polygon(0% 5%, 49% 60%, 100% 39%, 100% 91%, 48% 70%, 1% 90%);
+    }
+
+    .menene .rib {
+        background-color: #000000;
+        border-radius: 50%;
+        width: 457px;
+        height: 507px;
+        padding-bottom: 0%;
+        margin-top: -31.8em;
+        margin-left: -.15em;
+        clip-path: polygon(0% calc(44% - var(--rib-cut)), 49% calc(60% - var(--rib-cut)), 100% calc(39% - var(--rib-cut)), 
+        100% calc(45% - var(--rib-cut)), 48% calc(70% - var(--rib-cut)), 0% calc(48% - var(--rib-cut)));
+    }
+
+    .menene .rib::before {
+        content: "";
+        display: block;
+        background-color: #ECE948;
+        border-radius: 50%;
+        width: 448px;
+        height: 507px;
+        margin-left: 0.2em;
+        clip-path: polygon(0% calc(44% + var(--rib-cut-outline)), 49% calc(60% + var(--rib-cut-outline)), 100% calc(39% + var(--rib-cut-outline)), 
+        100% calc(42% - var(--rib-cut-outline)), 48% calc(66% - var(--rib-cut-outline)), 0% calc(45% - var(--rib-cut-outline)));
+    }
+
+    .rib-pattern {
+        margin-top: -7em;
+        margin-left: 5em;
+    }
+
+    .rib-pattern .pattern-container div {
+        width: 50px;
+        height: 50px;
+        background-color: #00000000;
+        border-radius: 40%;
+        border: solid 4px black;
+        border-top: transparent;
+        border-bottom: transparent;
+        border-right: transparent;
     }
 
     .menene .glasses {
