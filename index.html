@@ -30,7 +30,18 @@
                     <p>-</p>
                 </div>
                 <div class="clothes"></div>
-                <div class="rib">
+                <div class="rib"></div>
+                <div class="rib-pattern">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="pivot"></div>
+                <div class="rib-pattern">
+                    <p></p>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
             <div class="left-hand">
@@ -201,6 +212,52 @@
         100% calc(42% - var(--rib-cut-outline)), 48% calc(66% - var(--rib-cut-outline)), 0% calc(45% - var(--rib-cut-outline)));
     }
 
+    .menene .rib-pattern {
+        transform: rotateZ(0deg);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menene .rib-pattern p {
+        width: 30px;
+        height: 27px;
+        background-color: #00000000;
+        border-top-left-radius: 100%;
+        border: solid 4px black;
+        border-right: transparent;
+        border-bottom: transparent;
+        transform: rotateZ(-45deg);
+    }
+
+    .menene .rib-pattern p:nth-child(1) {
+        margin-top: -12.8em;
+        margin-left: 12.5em;
+    }
+
+    .menene .rib-pattern p:nth-child(2) {
+        margin-top: -13.5em;
+        margin-left: -3.8em;
+    }
+
+    .menene .rib-pattern p:nth-child(3) {
+        margin-top: -14.3em;
+        margin-left: -4em;
+    }
+
+    .menene .rib-pattern p:nth-child(4) {
+        margin-top: -13em;
+        margin-left: 2em;
+    }
+
+    .menene .rib-pattern p:nth-child(even) {
+        transform: rotateZ(-55deg);
+    }
+
+    .menene .pivot ~ div {
+        transform: rotateY(180deg);
+        margin-top: -0.55em;
+    }
+
     .menene .glasses {
         display: flex;
         flex-direction: row;
@@ -243,7 +300,6 @@
         margin-bottom: 0em;
     }
 
-    /* Cejas */
     .menene .glass > p {
         width: 25px;
         height: 25px;
@@ -266,7 +322,6 @@
         transform: rotate(15deg);
     }
     
-    /* Ojos */
     .menene .glass:first-child p + p {
         border-radius: 50%;
         background-color: black;
