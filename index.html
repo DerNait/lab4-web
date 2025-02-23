@@ -30,12 +30,11 @@
                     <p>-</p>
                 </div>
                 <div class="clothes"></div>
-                <div class="rib"></div>
-            </div>
-            <div class="rib-pattern">
-                <div class="pattern-container">
-                    <div></div>
+                <div class="rib">
                 </div>
+            </div>
+            <div class="hand">
+                <p></p>
             </div>
         </div>
     </div>
@@ -199,22 +198,6 @@
         100% calc(42% - var(--rib-cut-outline)), 48% calc(66% - var(--rib-cut-outline)), 0% calc(45% - var(--rib-cut-outline)));
     }
 
-    .rib-pattern {
-        margin-top: -7em;
-        margin-left: 5em;
-    }
-
-    .rib-pattern .pattern-container div {
-        width: 50px;
-        height: 50px;
-        background-color: #00000000;
-        border-radius: 40%;
-        border: solid 4px black;
-        border-top: transparent;
-        border-bottom: transparent;
-        border-right: transparent;
-    }
-
     .menene .glasses {
         display: flex;
         flex-direction: row;
@@ -325,6 +308,26 @@
         height: 25px;
         margin-left: 6.8em;
         margin-top: -.3em;
+    }
+
+    .hand {
+        width: 50px;
+        height: 130px;
+        background-color: #018F82;
+        border: solid 7px black;
+        border-top-left-radius: 100%;
+        margin-left: -1.5em;
+        margin-top: -19em;
+    }
+
+    .hand p {
+       width: 30px;
+       height: 30px;
+       background-color: #AD5E40;
+       border: solid 7px black;
+       margin-top: 8.2em;
+       border-bottom-left-radius: 50%; 
+       border-bottom-right-radius: 100%; 
     }
 
 </style>
